@@ -1,4 +1,5 @@
-﻿using System;
+﻿using static System.Console;
+using NumberFun;
 
 namespace ConsoleApplication
 {
@@ -6,7 +7,11 @@ namespace ConsoleApplication
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var generator = new FibonacciGenerator();
+            foreach (var digit in generator.Generate(15))
+            {
+                WriteLine(digit);
+            }
         }
     }
 }
